@@ -1,0 +1,86 @@
+body {
+    background: url(foto1.jpg);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ebe1e1;
+}
+
+header {
+    background: #363535;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.produk-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.produk {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.produk img {
+    width: 100%; /* Mengatur lebar gambar agar sesuai dengan kontainer */
+    height: 200px; /* Mengatur tinggi gambar agar sama untuk semua gambar */
+    object-fit: cover; /* Memastikan gambar mengisi kontainer tanpa distorsi */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.rating {
+    display: flex; /* Menggunakan flexbox untuk menampilkan bintang secara horizontal */
+    cursor: pointer; /* Menunjukkan bahwa elemen dapat diklik */
+    font-size: 24px; /* Ukuran font untuk bintang */
+    color: #ccc; /* Warna bintang yang tidak terisi */
+}
+
+.rating:hover,
+.rating:hover ~ .rating {
+    color: #f39c12; /* Warna bintang saat hover */
+}
+
+.rating span {
+    display: inline-block; /* Menampilkan bintang sebagai blok inline */
+}
+
+/* Mengubah warna bintang yang terisi */
+.rating[data-rating="1"] span:nth-child(1),
+.rating[data-rating="2"] span:nth-child(2),
+.rating[data-rating="3"] span:nth-child(3),
+.rating[data-rating="4"] span:nth-child(4),
+.rating[data-rating="5"] span:nth-child(5) {
+    color: #f39c12; /* Warna bintang yang terisi */
+}
